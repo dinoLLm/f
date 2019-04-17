@@ -1,0 +1,24 @@
+/tmp/ccjs37YP.o: In function `main':
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:30: undefined reference to `sf::String::String(char const*, std::locale const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:30: undefined reference to `sf::VideoMode::VideoMode(unsigned int, unsigned int, unsigned int)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:30: undefined reference to `sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:32: undefined reference to `sf::Window::isOpen() const'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:35: undefined reference to `sf::Window::pollEvent(sf::Event&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:38: undefined reference to `sf::Window::close()'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:40: undefined reference to `sf::Color::Color(unsigned char, unsigned char, unsigned char, unsigned char)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:40: undefined reference to `sf::RenderTarget::clear(sf::Color const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:41: undefined reference to `sf::RenderStates::Default'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:41: undefined reference to `sf::RenderTarget::draw(sf::Drawable const&, sf::RenderStates const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:42: undefined reference to `sf::Window::display()'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:30: undefined reference to `sf::RenderWindow::~RenderWindow()'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:30: undefined reference to `sf::RenderWindow::~RenderWindow()'
+/tmp/ccjs37YP.o: In function `squares::squares()':
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:14: undefined reference to `sf::RectangleShape::RectangleShape(sf::Vector2<float> const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:14: undefined reference to `sf::RectangleShape::setSize(sf::Vector2<float> const&)'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:15: undefined reference to `sf::Color::Green'
+/home/zeus/Documents/EE205/Dumbproject/grid.cpp:15: undefined reference to `sf::Shape::setFillColor(sf::Color const&)'
+/tmp/ccjs37YP.o: In function `sf::RectangleShape::~RectangleShape()':
+/usr/include/SFML/Graphics/RectangleShape.hpp:41: undefined reference to `vtable for sf::RectangleShape'
+/usr/include/SFML/Graphics/RectangleShape.hpp:41: undefined reference to `vtable for sf::RectangleShape'
+/usr/include/SFML/Graphics/RectangleShape.hpp:41: undefined reference to `sf::Shape::~Shape()'
+collect2: error: ld returned 1 exit status
