@@ -23,6 +23,12 @@ if(DEBUG) std::cout << "Main Menu Constructor called" << std::endl;
      opt_rect.setPosition(Vector2f(OPTPOS));
      exit_rect.setPosition(Vector2f(EXITPOS));
 
+     ////Set Title text
+     //title.setFont();
+     //title.setString(TITLE);
+     //title.setCharacterSize(450);
+     //title.setFillColor(Color::Green);
+     //title.setStyle(Text::Bold | Text::Underlined);
      //Set other variables
      selected = start;
      n = 0;

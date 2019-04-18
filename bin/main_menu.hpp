@@ -8,6 +8,7 @@
 #include <iostream>
 
 //Specifiers to alter button appearance
+#define TITLE "PLACEHOLDER"
 #define HSIZE 1200.f
 #define VSIZE 250.f
 #define PLAYPOS 250,900
@@ -33,6 +34,14 @@ class Main_Menu : public GameState
        RectangleShape play_rect;
        RectangleShape opt_rect;
        RectangleShape exit_rect;
+
+       //Title text
+       Text title;
+
+       //Button text
+       Text play;
+       Text option;
+       Text exit;
 
        //Enumerator to keep track of button position
        enum select { start, options, exit };
