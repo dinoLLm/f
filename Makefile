@@ -34,7 +34,7 @@ grid_test: ./src/grid.o
 	g++ -c ./src/menu_test.cpp
 
 ./src/grid.o: ./src/grid.cpp
-	g++ -c ./src/grid.cpp
+	g++ -c ./src/grid.cpp -o ./src/grid.o
 
 #===========================================================================================================
 
