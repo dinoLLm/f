@@ -7,6 +7,16 @@
      using namespace sf;
 #include <iostream>
 
+//Specifiers to alter button appearance
+#define HSIZE 1200.f
+#define VSIZE 250.f
+#define PLAYPOS 250,900
+#define OPTPOS 250.f,1200.f
+#define EXITPOS 250.f,1500.f
+
+//Value to control debug statements
+#define DEBUG 1
+
 class Main_Menu : public GameState 
 {
      public:
