@@ -32,6 +32,5 @@ class map : public squares
 								//constructs and object for map
 								Map();
 			};
-
-
+			
 #endif
