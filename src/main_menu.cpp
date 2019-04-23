@@ -5,25 +5,30 @@
 #include <SFML/Graphics.hpp>
      using namespace sf;
 #include <iostream>
-#define DEBUG 1
 
 //Constructor
 Main_Menu::Main_Menu() {
 if(DEBUG) std::cout << "Main Menu Constructor called" << std::endl;
      //Set button size
-     play_rect = RectangleShape(Vector2f(400.f, 100.f));
-     opt_rect = RectangleShape(Vector2f(400.f, 100.f));
-     exit_rect = RectangleShape(Vector2f(400.f, 100.f));
+     play_rect = RectangleShape(Vector2f(HSIZE, VSIZE));
+     opt_rect = RectangleShape(Vector2f(HSIZE, VSIZE));
+     exit_rect = RectangleShape(Vector2f(HSIZE, VSIZE));
      //Set button texture/color
      play_rect.setFillColor(Color(100, 250, 50));
      opt_rect.setFillColor(Color(100, 250, 50));
      exit_rect.setFillColor(Color(100, 250, 50));
 
      //Set button location
-     play_rect.setPosition(Vector2f(200.f,100.f));
-     opt_rect.setPosition(Vector2f(200.f,220.f));
-     exit_rect.setPosition(Vector2f(200.f,340.f));
+     play_rect.setPosition(Vector2f(PLAYPOS));
+     opt_rect.setPosition(Vector2f(OPTPOS));
+     exit_rect.setPosition(Vector2f(EXITPOS));
 
+     ////Set Title text
+     //title.setFont();
+     //title.setString(TITLE);
+     //title.setCharacterSize(450);
+     //title.setFillColor(Color::Green);
+     //title.setStyle(Text::Bold | Text::Underlined);
      //Set other variables
      selected = start;
      n = 0;
