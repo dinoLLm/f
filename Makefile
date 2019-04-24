@@ -8,13 +8,17 @@ main: ./src/main_menu.o ./tst/main.o ./src/game.o
 	g++ ./tst/main.o ./src/main_menu.o ./src/game.o -o ./tst/a.out $(SFMLFLAGS)
 	./tst/a.out
 
-menu_test: ./src/menu_test.o 
+menu_test: ./src/menu_test.o
 	g++ ./src/menu_test.o -o ./tst/menu_test.out $(SFMLFLAGS)
 	./tst/menu_test.o
 
 grid_test: ./src/grid.o
 	g++ ./src/grid.o -o ./tst/grid_test.out $(SFMLFLAGS)
 	./tst/grid_test.out
+gridtest: ./tst/gridtest.o ./src/grid.o
+	g++./tst/gridtest.o -o ./tst/gridtest.out
+
+
 #==========================================================================================================
 
 #Commands to create .o files
@@ -30,8 +34,11 @@ grid_test: ./src/grid.o
 
 #Individual function proof of concepts
 
-./src/menu_test.o: ./src/menu_test.cpp 
+./src/menu_test.o: ./src/menu_test.cpp
 	g++ -c ./src/menu_test.cpp
+
+./tst/gridtest.o: ./tst/gridtest.cpp
+	g++ -c ./tst/gridtest.cpp -I./bin/ -o ./tst/gridtest.o
 
 ./src/grid.o: ./src/grid.cpp
 	g++ -c ./src/grid.cpp -o ./src/grid.o
