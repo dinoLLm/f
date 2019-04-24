@@ -8,7 +8,7 @@ main: ./src/main_menu.o ./tst/main.o ./src/game.o
 	g++ ./tst/main.o ./src/main_menu.o ./src/game.o -o ./tst/a.out $(SFMLFLAGS)
 	./tst/a.out
 
-menu_test: ./src/menu_test.o 
+menu_test: ./src/menu_test.o
 	g++ ./src/menu_test.o -o ./tst/menu_test.out $(SFMLFLAGS)
 	./tst/menu_test.o
 
@@ -30,7 +30,7 @@ grid_test: ./src/grid.o
 
 #Individual function proof of concepts
 
-./src/menu_test.o: ./src/menu_test.cpp 
+./src/menu_test.o: ./src/menu_test.cpp
 	g++ -c ./src/menu_test.cpp
 
 ./src/grid.o: ./src/grid.cpp
