@@ -19,10 +19,10 @@ class squares
 								//returns the y position of the tile
 								int get_YPosition();
 								//sets the X and Y position
-								void set_XYPosition(int Xpos int Ypos);
+								void set_XYPosition(int Xpos, int Ypos);
 
 			};
-class map : public squares
+class grid : public squares
 			{
 				private:
 
@@ -30,7 +30,7 @@ class map : public squares
 				public:
 								std::vector<squares*> columns;
 								//constructs and object for map
-								Map();
+								grid();
 			};
-			
+
 #endif

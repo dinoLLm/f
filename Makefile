@@ -12,8 +12,8 @@ menu_test: ./src/menu_test.o
 	g++ ./src/menu_test.o -o ./tst/menu_test.out $(SFMLFLAGS)
 	./tst/menu_test.o
 
-grid_test: ./src/grid.o
-	g++ ./src/grid.o -o ./tst/grid_test.out $(SFMLFLAGS)
+grid_test: ./tst/gridtest.o
+	g++ ./src/grid.o ./tst/gridtest.o -o ./tst/grid_test.out $(SFMLFLAGS)
 	./tst/grid_test.out
 #==========================================================================================================
 
@@ -32,9 +32,10 @@ grid_test: ./src/grid.o
 
 ./src/menu_test.o: ./src/menu_test.cpp
 	g++ -c ./src/menu_test.cpp
-
-./src/grid.o: ./src/grid.cpp
-	g++ -c ./src/grid.cpp -o ./src/grid.o
+./tst/gridtest.o: ./tst/gridtest.cpp ./bin/grid.hpp
+	g++ -c ./tst/gridtest.cpp -I./bin/-o ./tst/gridtest.o
+./src/grid.o: ./src/grid.cpp ./bin/grid.hpp
+	g++ -c ./src/grid.cpp  -I./bin/ -o ./src/grid.o
 
 #===========================================================================================================
 

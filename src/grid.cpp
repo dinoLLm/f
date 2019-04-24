@@ -11,19 +11,19 @@ squares::squares()
 
 }
 //returns the x and y coordinate of the tile
-int squares::get_x()const{return x;}
-int squares::get_y()const{return y;}
+int squares::get_XPosition(){return x;}
+int squares::get_YPosition(){return y;}
 
 
 //sets position of the tile
-void squares::set_x(int horizontal, int vertical)
+void squares::set_XYPosition(int Xpos, int Ypos)
 {
-	x = horizontal;
-	y = vertical;
+	x = Xpos;
+	y = Ypos;
 	tile.setPosition(sf::Vector2f(x,y));
 }
 //creates an object with squres stored as vector
-map::map()
+grid::grid()
 {
 	int x = 0;
 	for(int i =0; i<=179; i++)
@@ -31,7 +31,7 @@ map::map()
 		for(int j=0; j<=179; j++)
 		{
 			columns.push_back(new squares);
-			columns[x]->set_x(i*10,j*10);
+			columns[x]->set_XYPosition(i*10,j*10);
 			x++;
 		}
 	}
